@@ -20,13 +20,20 @@ whitenoise = np.random.normal(
 #ノイズ
 noise = whitenoise / 2
 #観測値
-y_ture = y_sample + noise
+y_true = y_sample + noise
 
 df = pd.DataFrame({
     "観測点": x_sample,
     "真値": y_sample,
-    "観測値": y_ture
+    "観測値": y_true
 })
+
+# DataFrame保存
+df.to_csv(
+    "week3/exe/ex1.3.tsv",
+    sep="\t",
+    index=False
+)
 
 print(df) 
 
