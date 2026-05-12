@@ -35,6 +35,11 @@ df.to_csv(
     index=False
 )
 
+#tsvを読み込む
+df = pd.read_csv(
+    "week3/exe/ex1.3.tsv",
+    sep="\t"
+)
 print(df) 
 
 
